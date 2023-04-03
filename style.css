@@ -8,25 +8,64 @@
     font-family: 'Roboto', sans-serif;
 }
 
-#container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+.campo {
+    font-size: 1.5rem;
 }
 
-#timer {
+body{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    font-family: sans-serif;
+    background: #000a18;
+  }
+  .card {
+    height: 90vh;
+    width: 90vw;
+    background: #07182E;
+    position: relative;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+   .timer {
+    z-index: 1;
+    color: #fff;
+    font-size: 1em;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 10px;
-}
-
-.campo {
-    font-size: 1.5rem;
-}
+  } 
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
+  } 
