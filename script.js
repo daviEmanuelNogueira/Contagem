@@ -21,7 +21,7 @@ function convertMsToTime(milliseconds) {
   }
   
   //btn.addEventListener('click', addValue)
-  const stringDate = '2025-12-12T23:59:59'
+  const stringDate = '2025-08-23T16:00:00'
   const date = new Date(stringDate);
   const atual = new Date();
   const miliseconds = date - atual
